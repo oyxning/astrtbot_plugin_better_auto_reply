@@ -1,0 +1,22 @@
+{
+    "enabled": {
+        "type": "bool",
+        "description": "插件总开关",
+        "default": true
+    },
+    "trigger_keywords": {
+        "type": "list",
+        "description": "触发关键词列表",
+        "hint": "除了被@之外，包含这些词的消息也会触发分析流程。例如：[\"机器人\", \"AstrBot\"]",
+        "default": [
+            "机器人",
+            "bot"
+        ]
+    },
+    "decision_making_prompt": {
+        "type": "text",
+        "description": "LLM决策Prompt模板",
+        "hint": "用于让LLM判断是否回复的Prompt模板。请确保包含 {user_message} 和 {is_at} 占位符，并要求返回指定JSON格式。",
+        "default": "\n你是一个名为AstrBot的AI助手的决策核心。你的任务是判断是否应该对用户的消息进行回复。\n\n你需要分析以下信息：\n1.  **用户消息**: {user_message}\n2.  **是否@机器人**: {is_at}\n3.  **历史对话（如果可用）**: {history}\n\n你的决策原则是：\n-   **直接提问或指令**: 如果用户明确向机器人提问或发出指令，应该回复。\n-   **寻求帮助**: 如果用户表现出需要帮助的意图，应该回复。\n-   **闲聊/搭话**: 如果用户只是想闲聊，并且话题有趣或积极，可以考虑回复以增强互动。\n-   **无意义或负面内容**: 如果用户消息无意义、含糊不清、是垃圾信息或负面内容，则不应回复。\n-   **只是在讨论机器人**: 如果用户只是在第三方视角讨论机器人，而不是直接与机器人互动，通常不需要回复。\n\n请以JSON格式输出你的决策，包含两个字段：\n-   `should_reply` (boolean): `true` 表示应该回复, `false` 表示不应回复。\n-   `reasoning` (string): 解释你做出这个决策的详细思考过程。\n\n---\n用户消息: \"{user_message}\"\n---\n你的决策 (JSON格式):\n"
+    }
+}

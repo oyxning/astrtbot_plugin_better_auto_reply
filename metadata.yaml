@@ -1,5 +1,14 @@
-name: helloworld # 这是你的插件的唯一识别名。
-desc: 这是 AstrBot 的默认插件，支持关键词回复。 # 插件简短描述
-version: v1.3 # 插件版本号。格式：v1.1.1 或者 v1.1
-author: Soulter # 作者
-repo: https://github.com/Soulter/helloworld # 插件的仓库地址
+# 插件的唯一识别名
+name: better_auto_reply
+
+# 插件的简短描述
+desc: 主动或被动分析群聊消息，由LLM决定是否回复，并输出思考过程。
+
+# 插件版本号
+version: v0.1.0
+
+# 插件作者
+author: LumineStory
+
+# 插件的Git仓库地址
+repo: [https://github.com/oyxning/astrtbot_plugin_better_auto_reply](https://github.com/oyxning/astrtbot_plugin_better_auto_reply)
