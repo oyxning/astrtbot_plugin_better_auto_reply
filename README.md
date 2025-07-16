@@ -76,3 +76,9 @@
 ## 🔗 仓库地址
 
 [github.com/oyxning/astrtbot_plugin_better_auto_reply](https://github.com/oyxning/astrtbot_plugin_better_auto_reply)
+
+## 💡 另：插件反馈群
+
+由于作者持续的那么一个懒，平常不会及时的看issues，所以开了个QQ反馈群方便用户及时的拷打作者。
+* 群号：928985352       
+* 进群密码：神人desuwa
